@@ -1,5 +1,5 @@
 # rnTest
-1. git clone git@github.com:blackstar217/rnTest.git yourProjectName
+1. git clone https://github.com/blackstar217/rnTest.git yourProjectName
 2. cd yourProjectName
 3. npm install
 4. react-native link
