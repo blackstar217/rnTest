@@ -28,7 +28,7 @@ class DrawerBar extends React.Component {
               style={styles.sidebarItems}
               onPress={() => this.navigate()}
             >
-              <Text style={styles.text}>Full Name</Text>
+              <Text style={styles.text}>Click here</Text>
             </TouchableOpacity>
           </View>
         </View>
