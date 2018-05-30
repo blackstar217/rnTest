@@ -57,5 +57,11 @@ export default {
   text: {
     fontSize: 30,
     color: "#ff2e57"
+  },
+  errorTextStyle: {
+    color: '#E64A19',
+    alignSelf: 'center',
+    paddingTop: 10,
+    paddingBottom: 10
   }
 };
