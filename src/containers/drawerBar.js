@@ -5,11 +5,15 @@ import Icon from "react-native-vector-icons/Ionicons";
 import styles from "../style/";
 
 class DrawerBar extends React.Component {
-  navigate = () => {
+  navigate = mode => {
     setTimeout(() => {
       this.drawerClose();
     }, 0);
-    NavigationActions.fullNameScreen();
+    if (mode === "login") {
+      NavigationActions.loginScreen();
+    } else {
+      NavigationActions.signUpScreen();
+    }
   };
 
   drawerClose = () => {
@@ -21,14 +25,20 @@ class DrawerBar extends React.Component {
 
   render() {
     return (
-      <View style={styles.container}>
+      <View style={[styles.container, {backgroundColor: "#ff2e57"}]}>
         <View style={styles.content}>
           <View style={styles.contentContainer}>
             <TouchableOpacity
               style={styles.sidebarItems}
-              onPress={() => this.navigate()}
+              onPress={() => this.navigate("login")}
             >
-              <Text style={styles.text}>Click here</Text>
+              <Text style={styles.text}>Login</Text>
+            </TouchableOpacity>
+            <TouchableOpacity
+              style={styles.sidebarItems}
+              onPress={() => this.navigate("signup")}
+            >
+              <Text style={styles.text}>SignUp</Text>
             </TouchableOpacity>
           </View>
         </View>
