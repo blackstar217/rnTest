@@ -25,7 +25,7 @@ class DrawerBar extends React.Component {
 
   render() {
     return (
-      <View style={[styles.container, {backgroundColor: "#ff2e57"}]}>
+      <View style={styles.container}>
         <View style={styles.content}>
           <View style={styles.contentContainer}>
             <TouchableOpacity
